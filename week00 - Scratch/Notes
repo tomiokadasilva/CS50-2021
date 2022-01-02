@@ -1,0 +1,76 @@
+In this week we covered some introductory concepts in the computer science field. Those concepts contribute to a broad understand of Computer Science.
+
+Bits and bytes:
+
+Are the smallest piece of information inside a computer. Can have 2 states, on or off. It can represents numbers for example 01 = 1 or 10 = 2
+
+Bits are read on the binary number system as they have 2 possible states per number ( 0 or 1 ). 
+Therefore, in order to convert from binary to decimal we should multiply each number by 2^n
+
+for example:
+
+for the number 10101
+
+
+1.2^4 + 0.2^3 + 1.2^2 + 0.2^1 + 1.2^0
+
+and that's equal to 16 + 0 + 4 + 0 + 1 = 21
+
+8 bits agregatted together can compose a byte (00000000)
+
+Those bytes can represent symbols, letters, numbers, music, colors, images, etc. We use the ASCII Table to represent each symbol such as letters, symbols, numbers.
+ (each symbol in the ASCII table are composed by a byte)
+https://upload.wikimedia.org/wikipedia/commons/1/1b/ASCII-Table-wide.svg
+
+
+As the time advanced, more and more bytes were required to store the amount of information we use nowadays and for this reason we invented the unicode 
+https://unicode-table.com/en/
+
+--------------------------------------------------------------
+Algorithms
+
+In order for the computer to process those bytes into useful information the data should pass through an algorithm (or a program) which will resolve a problem based on its input
+giving us an output
+
+step-by-step instructions to solve a problem
+
+For example:
+
+If we want to look for someone in the phone list by the letter of J one of the ways is passing page by page until we hit the letter J
+
+That would took 'n' interactions until we have found the correct name. This would take a lot of time and is not scalable as the more pages we add,
+the more interactions is needed. 
+
+Another way would be going 2 pages at a time but this method reveal a problem, we could be missing the name in the pages we aren't looking. Also, this method is not fast either
+as for an infinite numbers of pages, for example, it would take infinite interactions in order to find the correct name.
+
+Another approach could be dividing the phone list in half, looking if we passed 'J' or if 'J' is still on the rest of the phone list.
+
+If we passed, we can toss the rest of the pages away and divide again the remaining pages. Then we can progressively repeat this process until we find the correct name.
+
+This would result in a log2 n number of interactions, resulting in a way faster method.
+
+This process is a result of an algoritm. A series of instructions where we achieve the desirable result based on our input.
+
+This could be translated as:
+
+01. Pick up phone book
+02. Open to the middle of the phone book
+03. Look at the page
+04. If person is on the page
+05.   Call person
+06. Else if person is earlier on the book
+07.   Open to middle of left half of book
+08.   Go back to line 3
+09. Else if person is later in book
+10.   Open to middle of right half of book
+11.   Go back to line 3
+12. Else  
+13.   Quit
+
+In this example we already can have at first glance some patterns of functions, conditionals, booleans, loops
+
+Functions: Pick up, Open to, Look at, Call, Go Back, Quit
+conditionals: If, Else If, Else
+booleans: person is on the page, person is earlier on the book, person is later in book
+loops: Go back to line 3
